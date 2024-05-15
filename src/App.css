@@ -1,5 +1,25 @@
 .App {
+  /* background-color: #f7f9fc; */
+  background-color: rgba(10, 10, 10, 1);
   text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.AppBg {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    rgba(120, 119, 198, 0.3),
+    hsla(0, 0%, 100%, 0)
+  );
+}
+
+.container {
+  position: relative;
 }
 
 .App-logo {

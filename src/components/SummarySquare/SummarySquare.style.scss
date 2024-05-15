@@ -1,0 +1,322 @@
+@import "../../constants.style.scss";
+
+.summary-square {
+  @include card("light", 0px);
+  @include displayFlex;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+
+  .summary-square-caption {
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba($color: #fff, $alpha: 0.25);
+
+    &:nth-last-child(1) {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &.experience {
+    align-content: flex-start;
+    text-align: left;
+
+    h3,
+    section {
+      width: 100%;
+      z-index: 2;
+    }
+
+    h3 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    section {
+      p,
+      h4,
+      h6 {
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        color: $color-primary;
+      }
+
+      p,
+      h6 {
+        color: #fff;
+      }
+
+      p {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.card,
+  .card {
+    @include glassCard;
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: -30%;
+      top: -50%;
+      background-color: $color-primary;
+      filter: blur(50px);
+      transform: scale(0);
+      transform-origin: top left;
+      opacity: 0;
+      transition: 0.5s all ease-in-out;
+      z-index: 0;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+    }
+
+    &.bottom {
+      justify-content: flex-end !important;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      img {
+        max-height: 200px;
+      }
+    }
+
+    &:hover {
+      .magic {
+        color: $color-primary;
+        opacity: 1;
+      }
+    }
+
+    .magic {
+      width: 50px;
+      height: 150px;
+      transform: rotate(135deg);
+      color: rgba(10, 10, 10, 1);
+      opacity: 0.5;
+      position: absolute;
+      top: -40px;
+      left: 30px;
+      transition: 0.5s ease-in-out all;
+    }
+
+    h2 {
+      width: 100%;
+      @include displayFlex;
+      font-size: 36px;
+      color: $color-primary;
+      margin-bottom: 10px;
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      &.h2-introduce {
+        padding-top: 70px;
+      }
+    }
+
+    .lets-work {
+      color: #fff;
+      width: fit-content;
+      margin-bottom: 0;
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .icons {
+      @include displayFlex;
+      width: 100%;
+      margin: 20px auto;
+      // justify-content: space-between;
+      justify-content: flex-start;
+
+      svg {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        color: $color-primary;
+        border: solid 1px;
+        border-radius: 50%;
+        padding: 7px;
+        overflow: visible;
+        transition: 0.5s ease-in-out all;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .summary-square-social {
+      width: 100%;
+
+      h5 {
+        color: #fff;
+      }
+
+      h3 {
+        color: $color-primary;
+      }
+    }
+
+    .icon-float-link {
+      position: absolute;
+      right: 30px;
+      bottom: 20px;
+      font-size: 50px;
+      transform: rotate(-45deg);
+      transition: 0.5s ease-in-out all;
+    }
+  }
+
+  h1 {
+    @include displayFlex;
+    font-size: 74px;
+    color: #fff;
+
+    svg {
+      color: $color-primary;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 2;
+  }
+
+  .card-summary-caption {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+
+    svg {
+      color: #d9dffa;
+      font-size: 25px;
+      transition: 0.25s all ease-in-out;
+    }
+
+    section {
+      h5 {
+        @extend .h5;
+        color: #df2f79;
+        font-weight: 600;
+        margin-top: 15px;
+        opacity: 1;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      color: #df2f79;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    .profile,
+    .summary {
+      grid-column: span 2 !important;
+    }
+
+    .summary {
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1002px) {
+  .grid {
+    grid-template-columns: 1fr 1fr !important;
+
+    .profile {
+      width: fit-content;
+      margin: auto;
+
+      img {
+        max-width: 250px;
+        height: 250px;
+      }
+    }
+
+    .experience,
+    .bottom {
+      grid-column: span 1 !important;
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+
+    .profile,
+    .summary,
+    .bottom,
+    .experience {
+      grid-column: span 1 !important;
+    }
+
+    .bottom {
+      .icons {
+        margin-top: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .grid {
+    .summary {
+      h1 {
+        font-size: 35px;
+      }
+
+      h2 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

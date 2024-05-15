@@ -1,0 +1,150 @@
+@import "../../constants.style.scss";
+
+.header {
+  backdrop-filter: blur(0) brightness(1);
+  height: 75px;
+  position: sticky !important;
+  top: 0;
+  transition: 0.25s ease-in-out all;
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+
+  &.fixed {
+    backdrop-filter: blur(20px) brightness(0.7);
+    background: linear-gradient(
+      transparent 0%,
+      rgba($color: #000, $alpha: 0.25) 100%
+    );
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.1);
+    transition: 0.25s ease-in-out all;
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+
+    a {
+      &:hover,
+      &:active,
+      &.active {
+        color: #df2f79;
+        opacity: 0.7;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .link-btn {
+    @include link-btn;
+    background-color: #df2f79;
+  }
+
+  .container {
+    a {
+      img {
+        height: 65px;
+        width: fit-content;
+      }
+    }
+
+    .hamburger-menu {
+      color: #fff;
+      margin-left: 20px;
+      position: relative;
+      height: 50px;
+      width: 50px;
+
+      svg {
+        height: 100%;
+        width: 100%;
+        transition: 0.5s ease-in-out all;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.hamburger {
+          transform: scale(1);
+
+          &.visible {
+            transform: scale(0);
+          }
+        }
+
+        &.close {
+          transform: scale(0);
+
+          &.visible {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .hamburger-menu-container {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      width: 350px;
+      padding: 10px;
+      border-radius: 10px;
+      transition: 0.5s ease-in-out all;
+      opacity: 0;
+      background: #000;
+      box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.1);
+      transition: 0.25s ease-in-out all;
+
+      &.visible {
+        opacity: 1;
+      }
+
+      a {
+        padding: 1em;
+        border-bottom: solid 1px $color-neutral;
+
+        &:hover,
+        &:active,
+        &.active {
+          color: #df2f79;
+          opacity: 0.7;
+        }
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:nth-last-child(1) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .hamburger-menu,
+    .hamburger-menu-container {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .container {
+      .menu-bar {
+        display: none;
+      }
+
+      .hamburger-menu,
+      .hamburger-menu-container {
+        display: block;
+      }
+    }
+  }
+}
