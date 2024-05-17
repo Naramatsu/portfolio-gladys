@@ -11,7 +11,6 @@ import {
   educationList,
   experienceLabel,
   experienceList,
-  // letsWork,
   profilesLabel,
   selfSummary,
   selfSummaryLabel,
@@ -87,17 +86,12 @@ const Home = () => {
             <h3>{socialMediaLabel}</h3>
           </section>
         </SummarySquare>
-        {/* <SummarySquare className="card row-2">
-          <SlMagicWand className="magic" />
-          {letsWork}
-          <GiBranchArrow className="icon-float-link" />
-        </SummarySquare> */}
         <SummarySquare className="card bottom row-2">
           <img
             src="https://c1.wallpaperflare.com/preview/701/451/778/photographer-web-design-workspace-art-and-design.jpg"
             alt="works"
           />
-          <h2>{worksLabel}</h2>
+          <h2 style={{ fontSize: "1.75rem" }}>{worksLabel}</h2>
           <GiBranchArrow className="icon-float-link" />
         </SummarySquare>
       </Container>

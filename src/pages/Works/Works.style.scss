@@ -1,0 +1,98 @@
+@import "../../constants.style.scss";
+
+.img {
+  width: 350px;
+  height: 710px;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.works {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+
+  h2 {
+    font-size: 36px;
+    color: $color-primary;
+  }
+
+  .works-container {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin-top: 50px;
+
+    .works-list {
+      position: relative;
+      display: flex;
+      gap: 20px;
+      left: 0;
+      transition: 0.5s ease-in-out all;
+
+      img,
+      video {
+        @extend .img;
+        width: 348px;
+        margin: 0 1px;
+        filter: grayscale(1);
+        transform: scale(0.8);
+        transition: 0.5s ease-in-out all;
+        cursor: pointer;
+
+        &.active {
+          filter: grayscale(0);
+          transform: scale(1);
+        }
+      }
+    }
+
+    .phone-frame {
+      @extend .img;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(1.01);
+      pointer-events: none;
+    }
+
+    .phone-frame-selectors {
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      transform: translateY(-50%);
+      font-size: 30px;
+      z-index: 2;
+      backdrop-filter: drop-s;
+      cursor: pointer;
+
+      &.disable {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.2;
+      }
+
+      &.hidden {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        left: 320px;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .works {
+    .works-container {
+      width: 90%;
+      margin: 50px auto;
+    }
+  }
+}

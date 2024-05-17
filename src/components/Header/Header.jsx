@@ -7,6 +7,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
 
 import "./Header.style.scss";
+import { letsTalk, routes } from "./Header.data";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(window.scrollY || 0);
@@ -31,13 +32,15 @@ const Header = () => {
           <img src="GM.png" alt="logo" />
         </Navbar.Brand>
         <Nav className="me-auto menu-bar">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Works</Nav.Link>
-          <Nav.Link href="#pricing">Contact</Nav.Link>
+          {routes.map(({ link, label }, index) => (
+            <Nav.Link key={index} href={link}>
+              {label}
+            </Nav.Link>
+          ))}
         </Nav>
         <Nav>
-          <Nav.Link href="#pricing" className="link-btn">
-            Let's talk
+          <Nav.Link href={letsTalk.link} className="link-btn">
+            {letsTalk.label}
           </Nav.Link>
         </Nav>
         <Nav
@@ -48,9 +51,14 @@ const Header = () => {
           <IoCloseOutline className={`${hamburguerMenuClassName} close`} />
         </Nav>
         <Nav className={`hamburger-menu-container ${hamburguerMenuClassName}`}>
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Works</Nav.Link>
-          <Nav.Link href="#pricing">Contact</Nav.Link>
+          {routes.map(({ link, label }, index) => (
+            <Nav.Link key={index} href={link}>
+              {label}
+            </Nav.Link>
+          ))}
+          <Nav.Link href={letsTalk.link} className="link-btn">
+            {letsTalk.label}
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>

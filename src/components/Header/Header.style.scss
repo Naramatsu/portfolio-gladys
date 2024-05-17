@@ -46,6 +46,12 @@
   .link-btn {
     @include link-btn;
     background-color: #df2f79;
+    width: 150px;
+
+    &:hover {
+      color: #df2f79;
+      background-color: #fff;
+    }
   }
 
   .container {

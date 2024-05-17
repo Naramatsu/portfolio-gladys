@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 
 import "./App.css";
+import Works from "./pages/Works";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <section className="AppBg">
         <Header />
         <Home />
+        <Works />
       </section>
     </main>
   );
