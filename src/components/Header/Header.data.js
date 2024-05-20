@@ -6,8 +6,16 @@ export const routes = [
     label: TABS.HOME,
   },
   {
+    link: ROUTES.SERVICES,
+    label: TABS.SERVICES,
+  },
+  {
     link: ROUTES.WORKS,
     label: TABS.WORKS,
+  },
+  {
+    link: ROUTES.BRANDS,
+    label: TABS.BRANDS,
   },
   {
     link: ROUTES.CONTACTME,

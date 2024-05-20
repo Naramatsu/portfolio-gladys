@@ -8,14 +8,18 @@ export const ACTIVE = "active";
 
 export const ROUTES = {
   HOME: "#home",
+  SERVICES: "#services",
   WORKS: "#works",
+  BRANDS: "#brands",
   CONTACTME: "#contactme",
   LETSTALK: "#wapp",
 };
 
 export const TABS = {
   HOME: "Inicio",
+  SERVICES: "Servicios",
   WORKS: "Trabajos",
+  BRANDS: "Marcas",
   CONTACTME: "Contactame",
   LETSTALK: "Habla conmigo",
 };
