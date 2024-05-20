@@ -39,7 +39,7 @@ const Works = () => {
   };
 
   return (
-    <main className="works">
+    <main className="works" id="works">
       <h2>{workstitle}</h2>
       <Container className="works-container">
         <section className="works-list" style={{ ...leftCalculator }}>
