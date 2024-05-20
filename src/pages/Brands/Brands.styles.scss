@@ -1,0 +1,12 @@
+@import "../../constants.style.scss";
+
+.services {
+  margin-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+
+  h2 {
+    color: $color-primary;
+    font-size: 36px;
+  }
+}
