@@ -1,0 +1,35 @@
+@import "../../constants.style.scss";
+
+.services {
+  margin: auto 100px;
+  position: relative;
+
+  h2 {
+    padding-top: 100px;
+  }
+
+  .services-container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    position: relative;
+    overflow: visible;
+
+    .summary-square {
+      @include displayFlex;
+      position: relative;
+      flex-direction: column;
+      min-height: 250px;
+
+      img {
+        width: 75px;
+        height: 75px;
+      }
+
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+}
