@@ -3,17 +3,26 @@
 .summary-square {
   @include card("light", 0px);
   @include displayFlex;
-  cursor: pointer;
   height: 100%;
   width: 100%;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    cursor: default;
+  }
+
   .summary-square-caption {
-    padding-bottom: 10px;
     border-bottom: solid 1px rgba($color: #fff, $alpha: 0.25);
+    padding-bottom: 10px;
 
     &:nth-last-child(1) {
-      padding-bottom: 0;
       border-bottom: none;
+      padding-bottom: 0;
     }
   }
 
@@ -57,33 +66,33 @@
   &.card,
   .card {
     @include glassCard;
-    text-align: left;
-    padding: 30px;
-    position: relative;
     border-radius: 30px;
     overflow: hidden;
+    padding: 30px;
+    position: relative;
+    text-align: left;
     z-index: 1;
 
     &::before {
-      content: "";
-      width: 50%;
-      height: 100%;
-      position: absolute;
-      left: -30%;
-      top: -50%;
       background-color: $color-primary;
+      content: "";
       filter: blur(50px);
+      height: 100%;
+      left: -30%;
+      opacity: 0;
+      position: absolute;
+      top: -50%;
       transform: scale(0);
       transform-origin: top left;
-      opacity: 0;
       transition: 0.5s all ease-in-out;
+      width: 50%;
       z-index: 0;
     }
 
     &:hover {
       &::before {
-        transform: scale(1);
         opacity: 0.5;
+        transform: scale(1);
       }
     }
 
@@ -107,25 +116,25 @@
     }
 
     .magic {
-      width: 50px;
-      height: 150px;
-      transform: rotate(135deg);
       color: rgba(10, 10, 10, 1);
+      height: 150px;
+      left: 30px;
       opacity: 0.5;
       position: absolute;
       top: -40px;
-      left: 30px;
+      transform: rotate(135deg);
       transition: 0.5s ease-in-out all;
+      width: 50px;
     }
 
     h2 {
+      align-items: flex-end;
+      color: $color-primary;
+      font-size: 36px;
+      justify-content: flex-start;
+      margin-bottom: 10px;
       width: 100%;
       @include displayFlex;
-      font-size: 36px;
-      color: $color-primary;
-      margin-bottom: 10px;
-      align-items: flex-end;
-      justify-content: flex-start;
 
       &.h2-introduce {
         padding-top: 70px;
@@ -133,12 +142,12 @@
     }
 
     .lets-work {
+      bottom: 30px;
       color: #fff;
-      width: fit-content;
+      left: 30px;
       margin-bottom: 0;
       position: absolute;
-      left: 30px;
-      bottom: 30px;
+      width: fit-content;
 
       span {
         color: $color-primary;
@@ -151,21 +160,21 @@
 
     .icons {
       @include displayFlex;
-      width: 100%;
-      margin: 20px auto;
       // justify-content: space-between;
       justify-content: flex-start;
+      margin: 20px auto;
+      width: 100%;
 
       svg {
-        height: 50px;
-        width: 50px;
-        font-size: 25px;
-        color: $color-primary;
         border: solid 1px;
         border-radius: 50%;
-        padding: 7px;
+        color: $color-primary;
+        font-size: 25px;
+        height: 50px;
         overflow: visible;
+        padding: 7px;
         transition: 0.5s ease-in-out all;
+        width: 50px;
 
         &:hover {
           background-color: #fff;
@@ -186,10 +195,10 @@
     }
 
     .icon-float-link {
-      position: absolute;
-      right: 30px;
       bottom: 20px;
       font-size: 50px;
+      position: absolute;
+      right: 30px;
       transform: rotate(-45deg);
       transition: 0.5s ease-in-out all;
     }
@@ -197,8 +206,8 @@
 
   h1 {
     @include displayFlex;
-    font-size: 74px;
     color: #fff;
+    font-size: 74px;
 
     svg {
       color: $color-primary;
@@ -206,10 +215,10 @@
   }
 
   img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
     z-index: 2;
   }
 
@@ -229,7 +238,7 @@
     section {
       h5 {
         @extend .h5;
-        color: #df2f79;
+        color: $color-primary;
         font-weight: 600;
         margin-top: 15px;
         opacity: 1;
@@ -246,7 +255,7 @@
 
   &:hover {
     svg {
-      color: #df2f79;
+      color: $color-primary;
     }
   }
 }
@@ -271,12 +280,12 @@
     grid-template-columns: 1fr 1fr !important;
 
     .profile {
-      width: fit-content;
       margin: auto;
+      width: fit-content;
 
       img {
-        max-width: 250px;
         height: 250px;
+        max-width: 250px;
       }
     }
 
@@ -314,8 +323,8 @@
       }
 
       h2 {
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
       }
     }
   }

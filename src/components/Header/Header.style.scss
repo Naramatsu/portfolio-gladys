@@ -2,13 +2,13 @@
 
 .header {
   backdrop-filter: blur(0) brightness(1);
+  background: transparent;
   height: 75px;
   position: sticky !important;
   top: 0;
   transition: 0.25s ease-in-out all;
   width: 100%;
   z-index: 2;
-  background: transparent;
 
   &.fixed {
     backdrop-filter: blur(20px) brightness(0.7);
@@ -33,7 +33,7 @@
       &:hover,
       &:active,
       &.active {
-        color: #df2f79;
+        color: $color-primary;
         opacity: 0.7;
       }
 
@@ -45,12 +45,12 @@
 
   .link-btn {
     @include link-btn;
-    background-color: #df2f79;
+    background-color: $color-primary;
     width: 150px;
 
     &:hover {
-      color: #df2f79;
       background-color: #fff;
+      color: $color-primary;
     }
   }
 
@@ -64,18 +64,18 @@
 
     .hamburger-menu {
       color: #fff;
+      height: 50px;
       margin-left: 20px;
       position: relative;
-      height: 50px;
       width: 50px;
 
       svg {
         height: 100%;
-        width: 100%;
-        transition: 0.5s ease-in-out all;
+        left: 0;
         position: absolute;
         top: 0;
-        left: 0;
+        transition: 0.5s ease-in-out all;
+        width: 100%;
 
         &.hamburger {
           transform: scale(1);
@@ -96,30 +96,30 @@
     }
 
     .hamburger-menu-container {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      width: 350px;
-      padding: 10px;
-      border-radius: 10px;
-      transition: 0.5s ease-in-out all;
-      opacity: 0;
       background: #000;
+      border-radius: 10px;
       box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.1);
+      opacity: 0;
+      padding: 10px;
+      position: fixed;
+      right: 20px;
+      top: 80px;
+      transition: 0.5s ease-in-out all;
       transition: 0.25s ease-in-out all;
+      width: 350px;
 
       &.visible {
         opacity: 1;
       }
 
       a {
-        padding: 1em;
         border-bottom: solid 1px $color-neutral;
+        padding: 1em;
 
         &:hover,
         &:active,
         &.active {
-          color: #df2f79;
+          color: $color-primary;
           opacity: 0.7;
         }
 
