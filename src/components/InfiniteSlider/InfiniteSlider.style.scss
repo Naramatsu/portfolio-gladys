@@ -1,0 +1,90 @@
+@import "../../constants.style.scss";
+
+.infinite-slider-wrapper {
+  @include displayFlex;
+  gap: 0;
+  justify-content: flex-start;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+
+  .infinite-slider {
+    @include displayFlex;
+    gap: 0;
+    position: relative;
+    width: fit-content;
+
+    &.left {
+      animation: slidingLeft 20s linear infinite;
+      animation-delay: -20s;
+
+      &:nth-child(2) {
+        animation: slidingLeft-2 20s linear infinite;
+        animation-delay: -10s;
+      }
+    }
+
+    &.right {
+      animation: slidingRight 20s linear infinite;
+      animation-delay: -20s;
+
+      &:nth-child(2) {
+        animation: slidingRight-2 20s linear infinite;
+        animation-delay: -10s;
+      }
+    }
+
+    img {
+      filter: grayscale(1);
+      height: 100px;
+      margin: auto 50px;
+      object-fit: cover;
+      transition: 0.5s ease-in-out filter;
+      width: fit-content;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+@keyframes slidingLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slidingLeft-2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes slidingRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slidingRight-2 {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
