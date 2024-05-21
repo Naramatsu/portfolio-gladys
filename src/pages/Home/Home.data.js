@@ -1,5 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa6";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { whatsAppLink } from "../../constants";
 
 export const selfSummaryLabel = "AUTORESUMEN";
 export const experienceLabel = "Experiencia";
@@ -52,19 +53,11 @@ export const educationList = [
 
 export const socialMediaList = [
   {
-    icon: <FaInstagram />,
-    link: "/",
-  },
-  {
-    icon: <FaFacebookF />,
-    link: "/",
-  },
-  {
     icon: <FaLinkedinIn />,
     link: "/",
   },
   {
     icon: <FaWhatsapp />,
-    link: "/",
+    link: whatsAppLink,
   },
 ];
