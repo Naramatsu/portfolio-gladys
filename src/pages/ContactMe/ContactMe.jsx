@@ -87,7 +87,7 @@ const ContactMe = () => {
                 <textarea
                   value={formData.message}
                   name="message"
-                  placeholder="Mensaje"
+                  placeholder="Mensaje "
                   onChange={handlerText}
                 />
               </section>
