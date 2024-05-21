@@ -6,6 +6,7 @@ import Brands from "./pages/Brands";
 import Services from "./pages/Services";
 
 import "./App.css";
+import ContactMe from "./pages/ContactMe";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Services />
         <Works />
         <Brands />
+        <ContactMe />
       </section>
     </main>
   );
