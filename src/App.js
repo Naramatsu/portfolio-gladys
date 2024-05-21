@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 
 import "./App.css";
 import ContactMe from "./pages/ContactMe";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Works />
         <Brands />
         <ContactMe />
+        <Footer />
       </section>
     </main>
   );

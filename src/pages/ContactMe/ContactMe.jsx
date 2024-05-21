@@ -57,10 +57,10 @@ const ContactMe = () => {
           ))}
           <h4>{socialMediaLabel}</h4>
           <section className="contact-info-social">
-            <a href="/" target="_blank" rel="noreferrer noopner">
+            <a href="/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
             </a>
-            <a href={whatsAppLink} target="_blank" rel="noreferrer noopner">
+            <a href={whatsAppLink} target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
           </section>
