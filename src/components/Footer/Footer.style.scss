@@ -1,0 +1,55 @@
+@import "../../constants.style.scss";
+
+.footer {
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+
+  p {
+    padding: 20px 0;
+    margin-bottom: 0;
+    color: #fff;
+    opacity: 0.5;
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  ul {
+    @include displayFlex;
+    list-style: none;
+    gap: 30px;
+    margin-bottom: 0;
+    height: 50px;
+    padding: 0;
+
+    li {
+      @include displayFlex;
+      height: 100%;
+
+      a {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.25s ease-in-out all;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .footer {
+    height: auto;
+    ul {
+      height: auto;
+      gap: 15px;
+      flex-direction: column;
+    }
+  }
+}
