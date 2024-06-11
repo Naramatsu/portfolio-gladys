@@ -6,7 +6,7 @@ export const RIGHT = "right";
 export const DISABLE = "disable";
 export const ACTIVE = "active";
 
-export const whatsAppLink = "https://wa.me/573178559796";
+export const whatsAppLink = "https://wa.me/573002288092";
 
 export const ROUTES = {
   HOME: "#home",
@@ -22,6 +22,6 @@ export const TABS = {
   SERVICES: "Servicios",
   WORKS: "Trabajos",
   BRANDS: "Marcas",
-  CONTACTME: "Contactame",
-  LETSTALK: "Habla conmigo",
+  CONTACTME: "Contáctame",
+  LETSTALK: "¡Habla conmigo!",
 };

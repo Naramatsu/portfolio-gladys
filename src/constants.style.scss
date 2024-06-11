@@ -8,10 +8,8 @@ $color-neutral: #333333;
   padding: $padding;
 
   @if ($theme == "light") {
-    // background-color: #fff;
     color: #000;
   } @else {
-    // background-color: $color-dark;
     color: #fff;
   }
 }
