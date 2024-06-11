@@ -8,10 +8,11 @@ const Services = () => (
   <main className="services" id="services">
     <h2>{myServicesLabel}</h2>
     <Container className="services-container">
-      {servicesList.map(({ icon, label }, index) => (
+      {servicesList.map(({ icon, label, description }, index) => (
         <SummarySquare key={index} className="card">
           <img src={icon} alt="icon" />
           <h3>{label}</h3>
+          <p>{description}</p>
         </SummarySquare>
       ))}
     </Container>

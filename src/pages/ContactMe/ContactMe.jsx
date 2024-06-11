@@ -57,7 +57,11 @@ const ContactMe = () => {
           ))}
           <h4>{socialMediaLabel}</h4>
           <section className="contact-info-social">
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/gladys-paola-mendoza-d%C3%ADaz-/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
             <a href={whatsAppLink} target="_blank" rel="noopener noreferrer">

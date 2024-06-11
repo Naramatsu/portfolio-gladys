@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import SummarySquare from "../../components/SummarySquare";
 
-import { GiPolarStar, GiBranchArrow } from "react-icons/gi";
+import { GiPolarStar } from "react-icons/gi";
 import { SlMagicWand } from "react-icons/sl";
 
 import "./Home.style.scss";
@@ -16,19 +16,17 @@ import {
   selfSummaryLabel,
   socialMediaLabel,
   socialMediaList,
-  worksLabel,
 } from "./Home.data";
 import { communityManagerLabel, gladysMendozaLabel } from "../../constants";
+
+import profileImg from "../../assets/profile.png";
 
 const Home = () => {
   return (
     <section className="home" id="home">
       <Container className="grid">
         <SummarySquare className="card profile">
-          <img
-            src="https://wallpapershome.com/images/pages/pic_h/24953.jpeg"
-            alt="profile"
-          />
+          <img src={profileImg} alt="profile" />
         </SummarySquare>
         <SummarySquare className="row-3 summary">
           <h1>
@@ -47,13 +45,18 @@ const Home = () => {
             {selfSummary}
           </section>
         </SummarySquare>
-        <SummarySquare className="row-2 card experience">
+        <SummarySquare className="row-4 card experience">
           <h3>{experienceLabel}</h3>
-          {experienceList.map(({ date, position, company }, index) => (
+          {experienceList.map(({ date, position, company, duties }, index) => (
             <section key={index} className="summary-square-caption">
               <p>{date}</p>
               <h4>{position}</h4>
               <h6>{company}</h6>
+              <ul>
+                {duties.map((duty, index) => (
+                  <li key={index}>{duty}</li>
+                ))}
+              </ul>
             </section>
           ))}
         </SummarySquare>
@@ -85,14 +88,6 @@ const Home = () => {
             <h5>{profilesLabel}</h5>
             <h3>{socialMediaLabel}</h3>
           </section>
-        </SummarySquare>
-        <SummarySquare className="card bottom row-2">
-          <img
-            src="https://c1.wallpaperflare.com/preview/701/451/778/photographer-web-design-workspace-art-and-design.jpg"
-            alt="works"
-          />
-          <h2 style={{ fontSize: "1.75rem" }}>{worksLabel}</h2>
-          <GiBranchArrow className="icon-float-link" />
         </SummarySquare>
       </Container>
     </section>
