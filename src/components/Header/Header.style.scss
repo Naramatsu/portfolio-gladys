@@ -152,6 +152,10 @@
       .hamburger-menu,
       .hamburger-menu-container {
         display: block;
+
+        a:nth-last-child(1) {
+          display: none;
+        }
       }
     }
   }
