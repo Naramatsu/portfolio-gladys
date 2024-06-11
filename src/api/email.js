@@ -14,7 +14,6 @@ export const sendEmail = async (formData) => {
       subject: newSubject,
       react: EmailTemplate({ name, email, message, subject: newSubject }),
     });
-    console.log("hereee: ");
     return {
       error: null,
       success: true,
