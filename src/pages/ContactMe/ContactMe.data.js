@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 export const contactmeLabel = "Contacta me";
-export const contactInfoLabel = "Informacion de contacto";
+export const contactInfoLabel = "Información de contacto";
 export const socialMediaLabel = "Redes sociales";
 
 export const letsWorkTogether = (
@@ -16,17 +16,17 @@ export const contactInfoList = [
   {
     icon: <MdOutlineEmail />,
     name: "Email",
-    label: "Glays.mendoza@gmail.com",
+    label: "gmendozadiaz017@gmail.com",
   },
   {
     icon: <FaPhoneAlt />,
     name: "Telefono",
-    label: "(+57) 300 000 0000",
+    label: "(+57) 300 2288 092",
   },
   {
     icon: <BsFillGeoAltFill />,
-    name: "Localizacion",
-    label: "Colombia. Cartagena",
+    name: "Ubicación",
+    label: "Colombia. Turbaco",
   },
 ];
 

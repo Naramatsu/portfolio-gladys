@@ -1,3 +1,15 @@
+import w1 from "../../assets/works/camara_cctv_ekimak.jpg";
+import w2 from "../../assets/works/Historia_amaru_condominio.mp4";
+import w3 from "../../assets/works/Ekiamk_historia.jpg";
+import w4 from "../../assets/works/Historia_KAUA.mp4";
+import w5 from "../../assets/works/Expresarte_Fundacion_dame_esos_5.jpg";
+import w6 from "../../assets/works/Historias_EKIMAK.mp4";
+import w7 from "../../assets/works/Fuencanto_baru.jpg";
+import w8 from "../../assets/works/historia_servicio_ekimak.jpg";
+import w9 from "../../assets/works/panderitos_guerreras_yurbaco.jpg";
+import w10 from "../../assets/works/servicios_ekimak.jpg";
+import w11 from "../../assets/works/torta_de_zanahoria.jpg";
+
 export const workstitle = "Diseño de Historias";
 
 export const loading = "Loading...";
@@ -7,22 +19,39 @@ export const phoneFrame =
 
 export const workList = [
   {
-    url: "https://wallpapers.com/images/featured/mobile-58g8gv3r23zg29kw.jpg",
-  },
-  {
-    url: "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg",
-  },
-  {
-    url: "https://www.androidauthority.com/wp-content/uploads/2024/02/Dark-wallpaper-for-phone-15.jpg",
-  },
-  {
-    url: "https://wallpaper.forfun.com/fetch/3a/3afda9fff30a7e792a9fdf819267a536.jpeg",
-  },
-  {
-    url: "https://mfiles.alphacoders.com/980/980525.jpg",
+    url: w1,
   },
   {
     type: "video",
-    url: "https://res.cloudinary.com/dxg9gszax/video/upload/v1643900779/kromac-ui/Avenged_Sevenfold_-_Wish_You_Were_Here_g2vaqu.mp4",
+    url: w2,
+  },
+  {
+    url: w3,
+  },
+  {
+    type: "video",
+    url: w4,
+  },
+  {
+    url: w5,
+  },
+  {
+    type: "video",
+    url: w6,
+  },
+  {
+    url: w7,
+  },
+  {
+    url: w8,
+  },
+  {
+    url: w9,
+  },
+  {
+    url: w10,
+  },
+  {
+    url: w11,
   },
 ];
