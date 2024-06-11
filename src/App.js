@@ -4,10 +4,9 @@ import Home from "./pages/Home";
 import Works from "./pages/Works";
 import Brands from "./pages/Brands";
 import Services from "./pages/Services";
-
-import "./App.css";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
+import "./App.scss";
 
 const App = () => {
   return (
