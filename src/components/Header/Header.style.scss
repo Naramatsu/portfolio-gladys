@@ -45,12 +45,14 @@
 
   .link-btn {
     @include link-btn;
-    background-color: $color-primary;
+    border: solid 1px;
+    color: $color-primary;
+    background-color: transparent;
     width: 150px;
 
     &:hover {
       background-color: #fff;
-      color: $color-primary;
+      color: #000 !important;
     }
   }
 

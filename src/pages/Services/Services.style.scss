@@ -24,10 +24,16 @@
       img {
         height: 75px;
         width: 75px;
+        object-fit: contain;
       }
 
       h3 {
         color: #fff;
+        text-align: center;
+      }
+
+      p {
+        color: rgba($color: #fff, $alpha: 0.7);
         text-align: center;
       }
     }
@@ -71,15 +77,3 @@
     }
   }
 }
-
-// @media (max-width: 550px) {
-//   .services {
-//     .services-container {
-//       width: 90%;
-
-//       .summary-square:nth-last-child(1) {
-//         grid-column: span 1;
-//       }
-//     }
-//   }
-// }

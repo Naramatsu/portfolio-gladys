@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
 
+    .row-4,
     .row-3,
     .row-2 {
       align-items: center;
@@ -23,6 +24,10 @@
       .card-summary-horizontal-caption {
         text-align: center;
       }
+    }
+
+    .row-4 {
+      grid-column: span 4;
     }
 
     .row-2 {
