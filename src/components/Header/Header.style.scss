@@ -102,6 +102,7 @@
       border-radius: 10px;
       box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.1);
       opacity: 0;
+      transform: scaleX(0);
       padding: 10px;
       position: fixed;
       right: 20px;
@@ -109,8 +110,10 @@
       transition: 0.5s ease-in-out all;
       transition: 0.25s ease-in-out all;
       width: 350px;
+      transform-origin: right;
 
       &.visible {
+        transform: scaleX(1);
         opacity: 1;
       }
 
