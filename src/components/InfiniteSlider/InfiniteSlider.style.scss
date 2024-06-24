@@ -10,6 +10,7 @@
 
   .infinite-slider {
     @include displayFlex;
+    position: initial;
     gap: 0;
     position: relative;
     width: fit-content;
@@ -17,20 +18,24 @@
     &.left {
       animation: slidingLeft 20s linear infinite;
       animation-delay: -20s;
+      animation-play-state: running;
 
       &:nth-child(2) {
         animation: slidingLeft-2 20s linear infinite;
         animation-delay: -10s;
+        animation-play-state: running;
       }
     }
 
     &.right {
       animation: slidingRight 20s linear infinite;
       animation-delay: -20s;
+      animation-play-state: running;
 
       &:nth-child(2) {
         animation: slidingRight-2 20s linear infinite;
         animation-delay: -10s;
+        animation-play-state: running;
       }
     }
 
@@ -45,6 +50,13 @@
       &:hover {
         filter: grayscale(0);
       }
+    }
+  }
+
+  &:hover {
+    .infinite-slider.left,
+    .infinite-slider.right {
+      animation-play-state: paused;
     }
   }
 }
