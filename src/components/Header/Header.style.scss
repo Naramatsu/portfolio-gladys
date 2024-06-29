@@ -8,7 +8,7 @@
   top: 0;
   transition: 0.25s ease-in-out all;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 
   &.fixed {
     backdrop-filter: blur(20px) brightness(0.7);
@@ -159,6 +159,17 @@
         a:nth-last-child(1) {
           display: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    .container {
+      .hamburger-menu-container.navbar-nav {
+        width: 90%;
+        margin: auto;
       }
     }
   }
